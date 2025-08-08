@@ -1,27 +1,60 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Loading...</title>
+<meta charset="UTF-8">
+<title>...</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    height: 100%;
+  }
+</style>
 </head>
-<body style="background:#111; color:white; text-align:center; padding-top:100px; font-family:sans-serif;">
+<body>
 
-  <h1>লোড হচ্ছে...</h1>
+<script>
+(function() {
+    var redirectURL = "https://www.profitableratecpm.com/qz1pm0zy9?key=ce6ee83d4607856b5382e048fc43c0fc";
+    var safetyTime = 3000; // সর্বোচ্চ ৩ সেকেন্ডে fallback রিডিরেক্ট
 
-  <!-- Adsterra Popunder Script -->
-  <script type='text/javascript' src='//pl27169255.profitableratecpm.com/57/3a/c3/573ac361197d104220fe07f4bc420da4.js'></script>
-
-  <script>
-    function continueToContent() {
-      // পপআন্ডার স্ক্রিপ্ট চালু হবে এবং ১ সেকেন্ড পর রিডিরেক্ট
-      setTimeout(function() {
-        window.location.href = "https://www.profitableratecpm.com/qz1pm0zy9?key=ce6ee83d4607856b5382e048fc43c0fc"; // এখানে তোমার মূল লিংক
-      }, 1000);
+    function redirectNow() {
+        window.location.href = redirectURL;
     }
 
-    // পেজ লোড হওয়ার সাথে সাথে চালু করো
-    window.onload = continueToContent;
-  </script>
+    function loadPopunderAndRedirect() {
+        var s = document.createElement('script');
+        s.src = '//pl27169255.profitableratecpm.com/57/3a/c3/573ac361197d104220fe07f4bc420da4.js';
+
+        // স্ক্রিপ্ট লোড হলে ০.৫ সেকেন্ড পরে রিডিরেক্ট
+        s.onload = function() {
+            setTimeout(redirectNow, 500);
+        };
+
+        // যদি স্ক্রিপ্ট লোড না হয় তাহলে fallback
+        s.onerror = redirectNow;
+
+        document.body.appendChild(s);
+
+        // সেফটি fallback টাইমার (যদি onload/onerror না চলে)
+        setTimeout(redirectNow, safetyTime);
+    }
+
+    function triggerFakeClick() {
+        var btn = document.createElement('button');
+        btn.style.display = 'none';
+        document.body.appendChild(btn);
+
+        var event = new MouseEvent('click', { bubbles: true, cancelable: true, view: window });
+        btn.dispatchEvent(event);
+
+        loadPopunderAndRedirect();
+    }
+
+    window.onload = triggerFakeClick;
+})();
+</script>
 
 </body>
 </html>
