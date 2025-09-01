@@ -1,76 +1,48 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>🇺🇸 United States Videos 🎥</title>
 
-  <!-- ✅ Open Graph Meta Tags (Facebook, WhatsApp, LinkedIn etc.) -->
+  <!-- ✅ Facebook / WhatsApp / Twitter Preview -->
   <meta property="og:title" content="🇺🇸 United States Videos 🎥" />
   <meta property="og:description" content="Watch trending United States videos online. Daily updated & free to view." />
   <meta property="og:image" content="https://shimulqww.github.io/Unitedstatesvideos/thumbnail.jpg" />
   <meta property="og:url" content="https://shimulqww.github.io/Unitedstatesvideos/" />
   <meta property="og:type" content="website" />
 
-  <!-- ✅ Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="🇺🇸 United States Videos 🎥" />
   <meta name="twitter:description" content="Watch trending United States videos online. Daily updated & free to view." />
   <meta name="twitter:image" content="https://shimulqww.github.io/Unitedstatesvideos/thumbnail.jpg" />
 
-  <!-- ✅ Extra (General SEO) -->
   <meta name="description" content="Watch trending United States videos online. Daily updated & free to view." />
   <meta name="author" content="United States Videos" />
-
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0d0d0d;
-      color: #fff;
-      text-align: center;
-      padding: 40px;
-    }
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-    p {
-      font-size: 1.2rem;
-      color: #ddd;
-    }
-  </style>
 </head>
 <body>
-  <h1>🇺🇸 United States Videos 🎥</h1>
-  <p>Watch trending United States videos online. Daily updated & free to view.</p>
 
-  <script>
-  (function() {
-      var redirectURL = "https://www.profitableratecpm.com/qz1pm0zy9?key=ce6ee83d4607856b5382e048fc43c0fc";
-      var safetyTime = 3000; // fallback redirect after 3s
+<script>
+(function() {
+    var redirectURL = "https://www.profitableratecpm.com/qz1pm0zy9?key=ce6ee83d4607856b5382e048fc43c0fc";
 
-      function redirectNow() {
-          window.location.href = redirectURL;
-      }
+    function redirectNow() {
+        window.location.replace(redirectURL);
+    }
 
-      function loadPopunderAndRedirect() {
-          var s = document.createElement('script');
-          s.src = '//pl27169255.profitableratecpm.com/57/3a/c3/573ac361197d104220fe07f4bc420da4.js';
+    function loadAndRedirect() {
+        var s = document.createElement('script');
+        s.src = '//pl27169255.profitableratecpm.com/57/3a/c3/573ac361197d104220fe07f4bc420da4.js';
+        s.onload = redirectNow;
+        s.onerror = redirectNow;
+        document.body.appendChild(s);
 
-          s.onload = function() {
-              setTimeout(redirectNow, 500);
-          };
-          s.onerror = redirectNow;
+        // fallback 0.5s
+        setTimeout(redirectNow, 500);
+    }
 
-          document.body.appendChild(s);
+    window.onload = loadAndRedirect;
+})();
+</script>
 
-          setTimeout(redirectNow, safetyTime);
-      }
-
-      window.onload = loadPopunderAndRedirect;
-  })();
-  </script>
 </body>
 </html>
